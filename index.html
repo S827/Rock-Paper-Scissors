@@ -5,15 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Welcome to Rock Paper Scissors Game</h1>
-    <h3>This is a 11 Round Game</h3>
-    <h2 id="score">Score: User: 0 || Computer: 0</h2>
-    <h4>Press Start button to Play the Game</h4>
-    <h3 id="round">Round: </h3>
-    <button>Play Game</button>
-    <section></section>
+    <header>
+        <h1>Welcome to Rock Paper Scissors Game</h1>
+        <h3>This is a 11 Round Game</h3>
+    </header>
+    <div id="score">
+        <h2>Score</h2>
+        <p >YOU: <span id="player-score"></span></p>
+        <p>AI: <span id="ai-score"></span></p>
+    </div>
+    <button id="startGameBtn" onclick="playGame()">Play Game</button>
+    <div id="instruction">
+        <div id="start-panel" class="unshow">
+            <h2 id="round-num">Round: </h2>
+            <p id="option"></p>Select One Option</p>
+            <div class="options">
+                <button id="rock" onclick="playerSelection(this.id)">ROCK</button>
+                <button id="paper" onclick="playerSelection(this.id)">PAPER</button>
+                <button id="scissor" onclick="playerSelection(this.id)">SCISSOR</button>
+            </div>
+        </div>
+        <div id="winner" >
+            <div >
+                <h1 id="round-winner" class="unshow">Winner is </h1>
+            </div>
+            <div >
+                <h1 id="game-winner" class="unshow">Winner is </h1>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
-<script src="./main.js"></script>
 </html>
